@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.navbar-brand {
+  font-size: 1.9rem;
+  text-transform: capitalize;
+  color: #565387;
+}
+
+.menu_active {
+  font-weight: bold;
+  border-bottom: 1px solid #565387;
+}
+
+/* home */
+#header {
+  height: 80vh;
+  width: 99%;
+  margin-top: 2rem;
+}
+
+#header h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  color: black;
+}
+
+#header .brand-name {
+  color: #3498db;
+}
+
+#header h2 {
+  color: #484848;
+  font-size: 24px;
+}
+
+#header .btn-light {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #3498db;
+  border: 2px solid #3498db;
+  text-decoration: none;
+}
+
+#header .btn-light:hover {
+  color: #fff;
+  background: #3498db;
+}
+
+#header .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+.btn-outline-primary {
+  border: 2px solid #3498db;
+  border: 5px;
+}
+
+.btn-outline-primary:hover {
+  background: #3498db;
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+.footer_sec {
+  margin-bottom: -10rem !important;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.main_service {
+  height: 100vh;
+}
+
+.card-img {
+  width: 100%;
+  height: 10vh !important;
+  overflow: hidden;
+}
+
+.card-img img {
+  max-height: inherit;
+  height: inherit;
+  width: 20vw;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background-position: center;
+  background-origin: content-box;
+  border-bottom: 2px solid indianred;
+}
+
+@media screen and (max-width: 992px) {
+  .menu_active {
+    border-bottom: none;
+  }
+}
+
+/* 
+@media (max-width: 320px) {
+  #header {
+    height: 100%;
+    margin-top: 20px;
+  }
+  #header h1 {
+    font-size: 28px;
+  }
+  #header h2 {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  #header .header-img img {
+    min-width: 70vw;
+  }
+} */
+@media (max-width: 768px) {
+  .card .card-img {
+    height: 30vh !important;
+    width: 50vw !important;
+  }
+  .card-img img {
+    width: 50vw !important;
+  }
+  #header {
+    height: 100%;
+    margin-top: 20px;
+  }
+  #header h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+  }
+  #header h2 {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .header-img {
+    margin-top: 2rem !important;
+  }
+  #header .header-img img {
+    padding-top: 1rem !important;
+    min-width: 55vw;
+  }
+  .footer_sec {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 991px) {
+  #header {
+    height: 100vh !important;
+  }
+  #header h1 {
+    width: 99% !important;
+  }
+  .col-md-6 {
+    width: 90vw !important;
+  }
+  #header {
+    height: 50vh;
+    text-align: center;
+  }
+  #header .header-img {
+    height: 50vh !important;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #header .header-img img {
+    padding-top: 1rem;
+  }
+  #content {
+    text-align: center;
+  }
+}
+
+/* founder */
+.team_main {
+  height: 60vh !important;
+  margin-bottom: 3rem !important;
+}
+.team_main .card {
+  height: 60vh !important;
+}
+.card .card-img {
+  height: 30vh !important;
+  width: 30vw;
+}
+.card-img img {
+  width: 15vw;
+}
+
+.whts_btn {
+  background-color: #16be45 !important;
+  color: #ffffff;
+  font-size: 3rem;
+  overflow: hidden;
+}
+
+.whatsaap_btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: #ffffff !important;
+}
