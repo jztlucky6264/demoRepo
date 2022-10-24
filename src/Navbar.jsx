@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+
+  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   return (
     <>
       <div className="container-fluid nav_bg">
@@ -18,13 +21,16 @@ const Navbar = () => {
                   data-bs-toggle="collapse"
                   data-bs-target="#navbarTogglerDemo02"
                   aria-controls="navbarTogglerDemo02"
-                  aria-expanded="false"
+                  aria-expanded={!isNavCollapsed ? true : false}
                   aria-label="Toggle navigation"
+                  onClick={handleNavCollapse}
                 >
                   <span className="navbar-toggler-icon"></span>
                 </button>
                 <div
-                  className="collapse navbar-collapse"
+                  className={`${
+                    isNavCollapsed ? "collapse" : ""
+                  } navbar-collapse`}
                   id="navbarTogglerDemo02"
                 >
                   <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
@@ -35,6 +41,7 @@ const Navbar = () => {
                         className="nav-link active"
                         aria-current="page"
                         to="/"
+                        onClick={handleNavCollapse}
                       >
                         Home
                       </NavLink>
@@ -45,6 +52,7 @@ const Navbar = () => {
                         activeClassName="menu_active"
                         className="nav-link"
                         to="/team"
+                        onClick={handleNavCollapse}
                       >
                         Team
                       </NavLink>
